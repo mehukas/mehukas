@@ -1,0 +1,56 @@
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+  margin: auto;
+}
+
+h1, h2, h3, h4, h5, h6, p, main, footer {
+  font-family: 'Cabin', sans-serif;
+}
+
+body {
+  position: relative;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; 
+}
+
+/* Multilingual support */
+/* Hide all elements with a language class. */
+.en, .fi, .sv {
+  display: none;
+} 
+/* Show those elements that match their language class. */
+.en:lang(en), .fi:lang(fi), .sv:lang(sv) { 
+  display: block;
+} 
+/* Example usage:
+  <div class="en">Good morning</div>
+  <div class="fi">Good morning (Finnish)</div>
+  <div class="sv">God Moran</div>
+*/
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
