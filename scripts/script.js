@@ -1,11 +1,11 @@
-function activate_button(button) {
+function activateButton(button) {
   $(button).addClass('active').siblings().removeClass('active');
 }
 
 
-function switch_language(button, language) {
+function switchLanguage(button, language) {
   document.documentElement.lang = language;
-  activate_button(button)  
+  activateButton(button)  
   
 }
 
@@ -17,22 +17,31 @@ $(function() {
     $("#btn_about").addClass('active').siblings().removeClass('active');
   });
   $("#btn_about").click(function() {
-    activate_button(this);
+    activateButton(this);
   });
   $("#btn_prices").click(function() {
-    activate_button(this);
+    activateButton(this);
   });
   $("#btn_contact").click(function() {
-    activate_button(this);
+    activateButton(this);
   });
 
   $("#btn_finnish").click(function() {
-    switch_language(this, "FI-fi");
+    switchLanguage(this, "FI-fi");
   });
   $("#btn_swedish").click(function() {
-    switch_language(this, "SV-fi");
+    switchLanguage(this, "SV-fi");
   });
   $("#btn_english").click(function() {
-    switch_language(this, "EN-fi");
+    switchLanguage(this, "EN-fi");
   });
 });
+
+function myMap() {
+    var mapCanvas = document.getElementById("map");
+    var mapOptions = {
+        center: new google.maps.LatLng(60.4157266, 25.7952,598),
+        zoom: 10
+    };
+    var map = new google.maps.Map(mapCanvas, mapOptions);
+}
