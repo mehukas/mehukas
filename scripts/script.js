@@ -1,11 +1,17 @@
+// https://developers.google.com/maps/documentation/javascript/adding-a-google-map
+// https://console.developers.google.com/iam-admin/settings/project?project=mehukas-154611
+// https://console.developers.google.com/apis/api/maps_backend/overview?project=mehukas-154611&duration=P30D
+
 function myMap() {
-    var uluru = {lat: 60.4157266, lng: 25.7952598};  
+    var coordinates = {
+      lat: 60.4167413,
+      lng: 25.7726459};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
-      center: uluru
+      center: coordinates
     });
     var marker = new google.maps.Marker({
-      position: uluru,
+      position: coordinates,
       map: map
     });
 }
@@ -17,8 +23,8 @@ function activateButton(button) {
 
 function switchLanguage(button, language) {
   document.documentElement.lang = language;
-  activateButton(button)  
-  
+  activateButton(button)
+
 }
 
 $(function() {
