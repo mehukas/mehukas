@@ -4,8 +4,8 @@
 
 function myMap() {
     var coordinates = {
-      lat: 60.4167413,
-      lng: 25.7726459};
+      lat: 60.417258,
+      lng: 25.778989};
     var map = new google.maps.Map(document.getElementById('map'), {
       zoom: 10,
       center: coordinates
